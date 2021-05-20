@@ -24,7 +24,7 @@
 
           <div class="mb-3">
             <a href="">
-              <span class="badge purple mr-1">{{ object.get_category_display }}</span>
+              <span class="badge restaurant-orange mr-1">{{ object.get_category_display }}</span>
             </a>
           </div>
 
@@ -52,11 +52,11 @@
             </button>
 
           </form> {% endcomment %}
-          <a href="{{ object.get_add_to_cart_url }}" class="btn btn-primary btn-md my-0 p">
+          <a href="{{ object.get_add_to_cart_url }}" class="btn restaurant-blue white-text btn-md my-0 p">
             Add to cart
             <i class="fas fa-shopping-cart ml-1"></i>
           </a>
-          <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger btn-md my-0 p">
+          <a href="{{ object.get_remove_from_cart_url }}" class="btn restaurant-red white-text btn-md my-0 p">
             Remove from cart
           </a>
 
@@ -119,7 +119,58 @@
     </div>
     <!--Grid row-->
 
+    <section class="text-center mb-4"></section>
+
+    <div class="row wow fadeIn card-spacing">
+
+      {% for item in object_list %}
+      <div class="col-lg-3 col-md-6 mb-4">
+
+        <div class="card restaurant-blue">
+
+          <div class="view overlay">
+            {% comment %} <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg"
+              class="card-img-top img-size" {% endcomment %} <img src="{{ item.image.url }}"
+              class="card-img-top img-size">
+            <a href="{{ item.get_absolute_url }}">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+          <div class="card-body text-center">
+            <a href="" class="restaurant-black-color">
+              <h5>{{ item.get_category_display }}</h5>
+            </a>
+            <h5>
+              <strong>
+                <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}
+                  <span class="badge badge-pill restaurant-black">NEW</span>
+                </a>
+              </strong>
+            </h5>
+
+            <h4 class="font-weight-bold restaurant-black-color">
+              <strong>$
+                {% if item.discount_price %}
+                {{ item.discount_price }}
+                {% else %}
+                {{ item.price }}
+                {% endif %}
+              </strong>
+            </h4>
+
+          </div>
+
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
+
+    </section>
+
   </div>
+
 </main>
 
 {% endblock content %}
