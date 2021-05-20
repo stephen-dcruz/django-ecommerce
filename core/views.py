@@ -364,7 +364,7 @@ class ContactView(ListView):
 
 class MenuView(ListView):
     model = Item
-    paginate_by = 10
+    paginate_by = 4
     template_name = "menu.html"
 
 

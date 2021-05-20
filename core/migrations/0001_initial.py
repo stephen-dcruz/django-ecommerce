@@ -43,12 +43,13 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=100)),
                 ('price', models.FloatField()),
                 ('discount_price', models.FloatField(blank=True, null=True)),
-                ('category', models.CharField(choices=[('S', 'Shirt'), ('SW', 'Sport wear'), ('OW', 'Outwear')], max_length=2)),
+                ('category', models.CharField(choices=[('S', 'Shirt'), ('M', 'Main Course'), ('D', 'Dessert')], max_length=2)),
                 ('label', models.CharField(choices=[('P', 'primary'), ('S', 'secondary'), ('D', 'danger')], max_length=1)),
                 ('slug', models.SlugField()),
                 ('description', models.TextField()),
                 ('image', models.ImageField(upload_to='')),
             ],
+
         ),
         migrations.CreateModel(
             name='Order',
