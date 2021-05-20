@@ -4660,6 +4660,11 @@ input[type="button"].btn-block {
   width: 100%;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
+  
+}
+
+.logo-sizing {
+  height: 350px;
 }
 
 .card-img-bottom {
