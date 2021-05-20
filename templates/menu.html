@@ -12,7 +12,7 @@
                 {% for item in object_list %}
                 <div class="col-lg-3 col-md-6 mb-4">
 
-                    <div class="card">
+                    <div class="card restaurant-blue">
 
                         <div class="view overlay">
                             {% comment %} <img
@@ -25,18 +25,18 @@
                         </div>
 
                         <div class="card-body text-center">
-                            <a href="" class="grey-text">
+                            <a href="" class="restaurant-black-color">
                                 <h5>{{ item.get_category_display }}</h5>
                             </a>
                             <h5>
                                 <strong>
                                     <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}
-                                        <span class="badge badge-pill {{ item.get_label_display }}-color">NEW</span>
+                                        <span class="badge badge-pill restaurant-black">NEW</span>
                                     </a>
                                 </strong>
                             </h5>
 
-                            <h4 class="font-weight-bold blue-text">
+                            <h4 class="font-weight-bold restaurant-black-color">
                                 <strong>$
                                     {% if item.discount_price %}
                                     {{ item.discount_price }}
@@ -73,7 +73,8 @@
                 {% endif %}
 
                 <li class="page-item active">
-                    <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
+                    <a class="restaurant-black page-link" href="?page={{ page_obj.number }}"
+                        style="background-color: black">{{ page_obj.number }}
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
