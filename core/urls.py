@@ -11,7 +11,8 @@ from .views import (
     RequestRefundView,
     MenuView,
     HomeView,
-    BookingView
+    BookingView,
+    ContactView
 )
 
 app_name = 'core'
@@ -20,6 +21,7 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('menu/', MenuView.as_view(), name='home'),
     path('booking/', BookingView.as_view(), name='booking'),
+    path('contact/', ContactView.as_view(), name='contact'),
     path('checkout/', CheckoutView.as_view(), name='checkout'),
     path('order-summary/', OrderSummaryView.as_view(), name='order-summary'),
     path('product/<slug>/', ItemDetailView.as_view(), name='product'),

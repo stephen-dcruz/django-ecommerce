@@ -36,13 +36,19 @@ class UserProfile(models.Model):
 class UserProfile(models.Model):
     home = models.OneToOneField
 
+# these models are placed here to load the static pages in
+
+# ------------------------------------------------------------
 class Home(models.Model):
     title = models.CharField(max_length=100)
 
 class Booking(models.Model):
     title = models.CharField(max_length=100)
 
+class Contact(models.Model):
+    title = models.CharField(max_length=100)
 
+# ------------------------------------------------------------
 
 class Item(models.Model):
     title = models.CharField(max_length=100)
