@@ -39,6 +39,8 @@ class UserProfile(models.Model):
 class Home(models.Model):
     title = models.CharField(max_length=100)
 
+class Booking(models.Model):
+    title = models.CharField(max_length=100)
 
 
 

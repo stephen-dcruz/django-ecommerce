@@ -13,7 +13,7 @@ from django.utils import timezone
 from django.views.generic import ListView, DetailView, View
 
 from .forms import CheckoutForm, CouponForm, RefundForm, PaymentForm
-from .models import Item, OrderItem, Order, Address, Payment, Coupon, Refund, UserProfile, Home
+from .models import Item, OrderItem, Order, Address, Payment, Coupon, Refund, UserProfile, Home, Booking
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
@@ -347,6 +347,10 @@ class PaymentView(View):
 class HomeView(ListView):
     model = Home
     template_name = "home.html"
+
+class BookingView(ListView):
+    model = Booking
+    template_name = "booking.html"
 
 class MenuView(ListView):
     model = Item
