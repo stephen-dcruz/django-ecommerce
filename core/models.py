@@ -36,6 +36,11 @@ class UserProfile(models.Model):
 class UserProfile(models.Model):
     home = models.OneToOneField
 
+class Home(models.Model):
+    title = models.CharField(max_length=100)
+
+
+
 
 class Item(models.Model):
     title = models.CharField(max_length=100)

@@ -13,7 +13,7 @@ from django.utils import timezone
 from django.views.generic import ListView, DetailView, View
 
 from .forms import CheckoutForm, CouponForm, RefundForm, PaymentForm
-from .models import Item, OrderItem, Order, Address, Payment, Coupon, Refund, UserProfile
+from .models import Item, OrderItem, Order, Address, Payment, Coupon, Refund, UserProfile, Home
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
@@ -344,11 +344,14 @@ class PaymentView(View):
         messages.warning(self.request, "Invalid data received")
         return redirect("/payment/stripe/")
 
-
 class HomeView(ListView):
+    model = Home
+    template_name = "home.html"
+
+class MenuView(ListView):
     model = Item
     paginate_by = 10
-    template_name = "home.html"
+    template_name = "menu.html"
 
 
 class OrderSummaryView(LoginRequiredMixin, View):
