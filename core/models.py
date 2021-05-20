@@ -33,6 +33,9 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
+class UserProfile(models.Model):
+    home = models.OneToOneField
+
 
 class Item(models.Model):
     title = models.CharField(max_length=100)
