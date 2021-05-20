@@ -121,32 +121,32 @@
     input[type=text] {
       &:valid {
         +label {
-          color: $input-success-color !important;
+          color: $input-success-color ;
         }
       }
 
       &:invalid {
         +label {
-          color: $input-error-color !important;
+          color: $input-error-color ;
         }
       }
     }
 
     .form-control {
       &:valid:focus {
-        box-shadow: 0 1px 0 0 $input-success-color !important;
+        box-shadow: 0 1px 0 0 $input-success-color ;
       }
 
       &:valid {
-        border-color: $input-success-color !important;
+        border-color: $input-success-color ;
       }
 
       &:invalid:focus {
-        box-shadow: 0 1px 0 0 $input-error-color !important;
+        box-shadow: 0 1px 0 0 $input-error-color ;
       }
 
       &:invalid {
-        border-color: $input-error-color !important;
+        border-color: $input-error-color ;
       }
     }
   }
@@ -511,7 +511,7 @@
     }
 
     .form-control {
-      padding: 1.1rem .7rem .4rem !important;
+      padding: 1.1rem .7rem .4rem ;
     }
 
     label {

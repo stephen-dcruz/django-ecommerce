@@ -3,7 +3,7 @@
 body {
   &.modal-open {
     overflow: auto;
-    padding-right: 0 !important;
+    padding-right: 0 ;
   }
   &.scrollable {
     overflow-y: auto;
@@ -158,7 +158,7 @@ body {
 
 // Position & Size
 .modal {
-  padding-right: 0 !important;
+  padding-right: 0 ;
   .modal-dialog {
     @media (min-width: 768px) {
       &.modal-top {

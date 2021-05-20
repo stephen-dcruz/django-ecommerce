@@ -798,7 +798,7 @@
 }
 
 .flipInX {
-  backface-visibility: visible !important;
+  backface-visibility: visible ;
   animation-name: flipInX;
 }
 
@@ -829,7 +829,7 @@
 }
 
 .flipInY {
-  backface-visibility: visible !important;
+  backface-visibility: visible ;
   animation-name: flipInY;
 }
 
@@ -852,7 +852,7 @@
 .flipOutX {
   animation-duration: 0.75s;
   animation-name: flipOutX;
-  backface-visibility: visible !important;
+  backface-visibility: visible ;
 }
 
 @keyframes flipOutY {
@@ -873,7 +873,7 @@
 
 .flipOutY {
   animation-duration: 0.75s;
-  backface-visibility: visible !important;
+  backface-visibility: visible ;
   animation-name: flipOutY;
 }
 

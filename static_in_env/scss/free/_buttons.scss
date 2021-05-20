@@ -70,7 +70,7 @@
     &:active,
     &:focus,
     &:hover {
-      box-shadow: none !important;
+      box-shadow: none ;
       background-color: transparent;
     }
   }
@@ -100,55 +100,55 @@
 .btn,
 .btn-floating {
   .fa-lg {
-    font-size: 1.33333em  !important;
+    font-size: 1.33333em  ;
   }
 
   .fa-xs {
-    font-size: .75em !important;
+    font-size: .75em ;
   }
 
   .fa-sm {
-    font-size: .875em !important;
+    font-size: .875em ;
   }
 
   .fa-1x {
-    font-size: 1em !important;
+    font-size: 1em ;
   }
 
   .fa-2x {
-    font-size: 2em !important;
+    font-size: 2em ;
   }
 
   .fa-3x {
-    font-size: 3em !important;
+    font-size: 3em ;
   }
 
   .fa-4x {
-    font-size: 4em !important;
+    font-size: 4em ;
   }
 
   .fa-5x {
-    font-size: 5em !important;
+    font-size: 5em ;
   }
 
   .fa-6x {
-    font-size: 6em !important;
+    font-size: 6em ;
   }
 
   .fa-7x {
-    font-size: 7em !important;
+    font-size: 7em ;
   }
 
   .fa-8x {
-    font-size: 8em !important;
+    font-size: 8em ;
   }
 
   .fa-9x {
-    font-size: 9em !important;
+    font-size: 9em ;
   }
 
   .fa-10x {
-    font-size: 10em !important;
+    font-size: 10em ;
   }
 }
 @each $btn_name, $color_value in $mdb-colors {

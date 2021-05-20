@@ -102,12 +102,12 @@
 // Background color
 @mixin bg-variant($parent, $color) {
   #{$parent} {
-    background-color: $color !important;
+    background-color: $color ;
   }
   a#{$parent},
   button#{$parent} {
     @include hover-focus {
-      background-color: darken($color, 10%) !important;
+      background-color: darken($color, 10%) ;
     }
   }
 }
@@ -115,11 +115,11 @@
 // Typography
 @mixin text-emphasis-variant($parent, $color) {
   #{$parent} {
-    color: $color !important;
+    color: $color ;
   }
   a#{$parent} {
     @include hover-focus {
-      color: darken($color, 10%) !important;
+      color: darken($color, 10%) ;
     }
   }
 }
@@ -192,13 +192,13 @@
 }
 
 @mixin float-left {
-  float: left !important;
+  float: left ;
 }
 @mixin float-right {
-  float: right !important;
+  float: right ;
 }
 @mixin float-none {
-  float: none !important;
+  float: none ;
 }
 
 // CSS image replacement
@@ -250,7 +250,7 @@
 }
 
 @mixin invisible($visibility) {
-  visibility: $visibility !important;
+  visibility: $visibility ;
 }
 
 // MDB Mixins
@@ -267,7 +267,7 @@
 // Make button
 @mixin make-button ($name, $color) {
   .btn-#{$name} {
-    background-color: $color !important;
+    background-color: $color ;
     color: set-notification-text-color($color);
     &:hover {
       background-color: lighten($color, 5%);
@@ -283,17 +283,17 @@
       background-color: darken($color, 20%);
     }
     &.dropdown-toggle {
-      background-color: $color !important;
+      background-color: $color ;
       &:hover,
       &:focus {
-        background-color: lighten($color, 5%) !important;
+        background-color: lighten($color, 5%) ;
       }
     }
     &:not([disabled]):not(.disabled):active,
     &:not([disabled]):not(.disabled).active,
     .show>&.dropdown-toggle {
       box-shadow: $z-depth-1-half;
-      background-color: darken($color, 20%) !important;
+      background-color: darken($color, 20%) ;
     }
     &:not([disabled]):not(.disabled):active:focus,
     &:not([disabled]):not(.disabled).active:focus,
@@ -302,7 +302,7 @@
     }
   }
   .#{$name}-ic {
-    color: $color !important;
+    color: $color ;
     &:hover,
     &:focus {
       color: $color;
@@ -318,24 +318,24 @@
 // Make outline button
 @mixin make-outline-button ($name, $color) {
   .btn-outline-#{$name} {
-    border: 2px solid $color !important;
-    background-color: transparent !important;
-    color: $color !important;
+    border: 2px solid $color ;
+    background-color: transparent ;
+    color: $color ;
     &:hover,
     &:focus,
     &:active,
     &:active:focus,
     &.active {
-      border-color: $color !important;
-      background-color: transparent !important;
-      color: $color !important;
+      border-color: $color ;
+      background-color: transparent ;
+      color: $color ;
     }
     &:not([disabled]):not(.disabled):active,
     &:not([disabled]):not(.disabled).active,
     .show>&.dropdown-toggle {
       box-shadow: $z-depth-1-half;
-      background-color: transparent !important;
-      border-color: $color !important;
+      background-color: transparent ;
+      border-color: $color ;
     }
     &:not([disabled]):not(.disabled):active:focus,
     &:not([disabled]):not(.disabled).active:focus,
@@ -347,7 +347,7 @@
 // Make gradient
 @mixin make-gradient($name, $value) {
   .#{$name}-gradient {
-    background: linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
+    background: linear-gradient(40deg, map-get($value, start), map-get($value, end)) ;
   }
 }
 
@@ -355,7 +355,7 @@ $opacity: .9;
 // Make gradient
 @mixin make-gradient-rgba($name, $value) {
   .#{$name}-gradient-rgba {
-    background: linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
+    background: linear-gradient(40deg, map-get($value, start), map-get($value, end)) ;
   }
 }
 
@@ -383,8 +383,8 @@ $opacity: .9;
 
 @mixin make-badge($name, $color) {
   .badge-#{$name} {
-    background-color: $color !important;
-    color: set-notification-text-color($color) !important;
+    background-color: $color ;
+    color: set-notification-text-color($color) ;
   }
 }
 
