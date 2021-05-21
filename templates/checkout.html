@@ -37,11 +37,11 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
-                  <label for="shipping_zip">Zip</label>
-                  <input type='text' placeholder='Zip code' id='shipping_zip' name='shipping_zip'
+                  <label for="shipping_zip">Postcode</label>
+                  <input type='text' placeholder='Postcode' id='shipping_zip' name='shipping_zip'
                     class='form-control' />
                   <div class="invalid-feedback">
-                    Zip code required.
+                    Postcode required.
                   </div>
                 </div>
               </div>
@@ -59,14 +59,6 @@
               </div>
 
             </div>
-
-            {% if default_shipping_address %}
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" name="use_default_shipping" id="use_default_shipping">
-              <label class="custom-control-label" for="use_default_shipping">Use default shipping address: {{
-                default_shipping_address.street_address|truncatechars:10 }}</label>
-            </div>
-            {% endif %}
 
             <hr>
 
@@ -95,10 +87,10 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6 mb-4">
-                  <label for="billing_zip">Zip</label>
-                  <input type='text' placeholder='Zip code' id='billing_zip' name='billing_zip' class='form-control' />
+                  <label for="billing_zip">Postcode</label>
+                  <input type='text' placeholder='Postcode' id='billing_zip' name='billing_zip' class='form-control' />
                   <div class="invalid-feedback">
-                    Zip code required.
+                    Postcode required.
                   </div>
                 </div>
 
@@ -110,15 +102,6 @@
               </div>
 
             </div>
-
-            {% if default_billing_address %}
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" name="use_default_billing" id="use_default_billing">
-              <label class="custom-control-label" for="use_default_billing">Use default billing address: {{
-                default_billing_address.street_address|truncatechars:10 }}</label>
-            </div>
-            {% endif %}
-            <hr>
 
             <h2>Payment option</h2>
 
