@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-12 mb-4">
                 <div class="card">
-                    <form method="POST" class="card-body">
+                    <form class="card-body">
                         {% csrf_token %}
 
                         <h3>Personal details</h3>
@@ -17,31 +17,31 @@
                         <div class='hideable_shipping_form'>
 
                             <div class="md-form mb-5">
-                                <input type='text' placeholder='John' id='shipping_address' name='shipping_address'
+                                <input type='text' placeholder='John' id='first_name' name='shipping_address'
                                     class='form-control' />
                                 <label for="shipping_address" class="">First Name</label>
                             </div>
 
                             <div class="md-form mb-5">
-                                <input type='text' placeholder='Doe' id='shipping_address' name='shipping_address'
+                                <input type='text' placeholder='Doe' id='last_name' name='shipping_address'
                                     class='form-control' />
                                 <label for="shipping_address" class="">Last Name</label>
                             </div>
 
                             <div class="md-form mb-5">
-                                <input type='tel' placeholder='020 8371 8543' id='shipping_address2'
-                                    name='shipping_address2' class='form-control' />
+                                <input type='tel' placeholder='020 8371 8543' id='phone' name='shipping_address2'
+                                    class='form-control' />
                                 <label for="shipping_address2" class="">Contact Number</label>
                             </div>
 
                             <div class="md-form mb-5">
-                                <input type='date' placeholder='00/00/00' id='shipping_address2'
-                                    name='shipping_address2' class='form-control' />
+                                <input type='date' placeholder='00/00/00' id='date' name='shipping_address2'
+                                    class='form-control' />
                                 <label for="shipping_address2" class="">Date</label>
                             </div>
 
                             <div class="md-form mb-5">
-                                <input type='number' placeholder='0' id='shipping_address2' name='shipping_address2'
+                                <input type='number' placeholder='0' id='guests' name='shipping_address2'
                                     class='form-control' />
                                 <label for="shipping_address2" class="">Number of people</label>
                             </div>

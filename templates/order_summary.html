@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<main>
+<main class="mt-5 pt-4">
     <div class="container">
 
         <div class="table-responsive text-nowrap">
@@ -36,7 +36,7 @@
                             {% else %}
                             ${{ order_item.get_total_item_price }}
                             {% endif %}
-                            <a style='color: red;' href="{% url 'core:remove-from-cart' order_item.item.slug %}">
+                            <a style='color: #e71d36;' href="{% url 'core:remove-from-cart' order_item.item.slug %}">
                                 <i class="fas fa-trash float-right"></i>
                             </a>
                         </td>
@@ -64,8 +64,9 @@
                     </tr>
                     <tr>
                         <td colspan="5">
-                            <a class='btn btn-warning float-right ml-2' href='/checkout/'>Proceed to checkout</a>
-                            <a class='btn btn-primary float-right' href='/'>Continue shopping</a>
+                            <a class='btn btn-warning float-right ml-2 .restaurant-orange' href='/checkout/'>Proceed to
+                                checkout</a>
+                            <a class='btn btn-primary float-right restaurant-blue' href='/'>Continue shopping</a>
                         </td>
                     </tr>
                     {% endif %}

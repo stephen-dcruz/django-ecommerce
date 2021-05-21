@@ -86,90 +86,57 @@
       </div>
       <!--Grid column-->
 
-    </div>
-    <!--Grid row-->
+      <section class="text-center mb-4"></section>
 
-    <!--Grid row-->
-    <div class="row wow fadeIn">
+      <div class="row wow fadeIn card-spacing">
 
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-12 mb-4">
+        {% for item in object_list %}
+        <div class="col-lg-3 col-md-6 mb-4">
 
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/11.jpg" class="img-fluid" alt="">
+          <div class="card restaurant-blue">
 
-      </div>
-      <!--Grid column-->
+            <div class="view overlay">
+              {% comment %} <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg"
+                class="card-img-top img-size" {% endcomment %} <img src="{{ item.image.url }}"
+                class="card-img-top img-size">
+              <a href="{{ item.get_absolute_url }}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
 
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card-body text-center">
+              <a href="" class="restaurant-black-color">
+                <h5>{{ item.get_category_display }}</h5>
+              </a>
+              <h5>
+                <strong>
+                  <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}
+                    <span class="badge badge-pill restaurant-black">NEW</span>
+                  </a>
+                </strong>
+              </h5>
 
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid" alt="">
+              <h4 class="font-weight-bold restaurant-black-color">
+                <strong>$
+                  {% if item.discount_price %}
+                  {{ item.discount_price }}
+                  {% else %}
+                  {{ item.price }}
+                  {% endif %}
+                </strong>
+              </h4>
 
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-6 mb-4">
-
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid" alt="">
-
-      </div>
-      <!--Grid column-->
-
-    </div>
-    <!--Grid row-->
-
-    <section class="text-center mb-4"></section>
-
-    <div class="row wow fadeIn card-spacing">
-
-      {% for item in object_list %}
-      <div class="col-lg-3 col-md-6 mb-4">
-
-        <div class="card restaurant-blue">
-
-          <div class="view overlay">
-            {% comment %} <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg"
-              class="card-img-top img-size" {% endcomment %} <img src="{{ item.image.url }}"
-              class="card-img-top img-size">
-            <a href="{{ item.get_absolute_url }}">
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
-
-          <div class="card-body text-center">
-            <a href="" class="restaurant-black-color">
-              <h5>{{ item.get_category_display }}</h5>
-            </a>
-            <h5>
-              <strong>
-                <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}
-                  <span class="badge badge-pill restaurant-black">NEW</span>
-                </a>
-              </strong>
-            </h5>
-
-            <h4 class="font-weight-bold restaurant-black-color">
-              <strong>$
-                {% if item.discount_price %}
-                {{ item.discount_price }}
-                {% else %}
-                {{ item.price }}
-                {% endif %}
-              </strong>
-            </h4>
+            </div>
 
           </div>
 
         </div>
-
+        {% endfor %}
       </div>
-      {% endfor %}
+
+      </section>
+
     </div>
-
-    </section>
-
-  </div>
 
 </main>
 
